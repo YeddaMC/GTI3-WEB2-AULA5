@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Acessos</title>
+    <link rel="stylesheet" href="5.1.css">
+</head>
+<body>
+    <h1>Relatório de Acessos Semanais</h1>
+    
+    <!-- Formulário para solicitar o relatório -->
+    <form method="POST" action="5.1.php">
+        <button type="submit" name="gerar_relatorio">Gerar Relatório</button>
+    </form>
+
+    <div class="relatorio">
+        <?php 
+        //PHP aqui para gerar o relatório se o botão for pressionado
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['gerar_relatorio'])) {
+            include('5.1.php'); 
+        }
+        ?>
+    </div>
+</body>
+</html>
